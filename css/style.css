@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    background: #f5f5f5;
+    max-width: 1024px;
+    margin: 0 auto;
+    
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: rgb(9, 9, 99);
+    color: #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: rgb(9, 9, 80);
+    height: 50vh;
+    width: 100%;
+    border-top: 1px solid rgb(4, 4, 44);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.showNav {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 3;
+    transition: all 0.5s linear;
+  }
+
+  header li {
+      margin-top: 15px;
+      text-transform: uppercase;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.5s ease-in;
+  }
+
+  header li:hover {
+      opacity: 1;
+  }
+
+  header .menu {
+      font-size: 1.5rem;
+      cursor: pointer;
+  }
+
+  #hero {
+      background-image: url(../Images/girl\ 1.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+  }
+
+  #hero .herocover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+  }
+
+  #hero button,
+  h1,
+  h2,
+  span {
+    position: relative;
+  }
+
+  #hero h1 {
+      font-size: 4rem;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-bottom: 1rem;
+  }
+
+  #hero span {
+      font-size: 1.8rem;
+      color: rgb(191, 191, 206);
+      padding-bottom: 1rem;
+  }
+
+  #hero h2 {
+      font-size: 1.8rem;
+      padding-bottom: 1.5rem;
+  }
+
+  button {
+      height: 40px;
+      width: 160px;
+      font-weight: 800;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      border-radius: 10px;
+      border:none;
+      transition: all 0.5s Linear;
+  }
+  
+  button:hover {
+      background-color: rgb(4, 4, 116);
+      color: #ffffff;
+  }
+
+#hero button:nth-child(1):hover {
+    color: whitesmoke;
+    background-color: rgb(4, 4, 116);
+}
+
+#about h2 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+#about .aboutText p{
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+
+#about button {
+    background-color: royalblue;
+    color: white;
+    margin: 0 0 2rem;
+}
+
+#about button:hover {
+    color: darkblue;
+    background-color: whitesmoke;
+}
+
+#about .aboutImage {
+    width: 100%;
+    height: 35rem;
+    margin-bottom: 2rem;
+}
+
+#about .aboutImage img{
+    width: 80%;
+    height: 100%;
+}
+
+#portfolio {
+    background-color: whitesmoke;
+    padding: 1rem 2rem;
+}
+
+#portfolio h2 {
+    text-align: center;
+    margin: 2rem 0;
+    text-transform: uppercase;
+}
+
+#portfolio .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem
+}
+
+#portfolio .gridItem {
+    padding: 2rem;
+    height: 40rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -2px -2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#portfolio .gridItem:hover {
+    transform: scale(1.02);
+}
+
+#portfolio .gridItem h3 {
+    text-align: center;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+#portfolio .gridItem img {
+    height:80%;
+    object-fit: cover ;
+    margin: 0.5rem 0;
+    object-position: center center;
+    width: 80%;
+}
+
+#portfolio .gridItem p {
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#contact h2 {
+    text-align: center;
+    margin: 2rem 0;
+    text-transform: uppercase;
+}
+
+form {
+    width: 100%;
+    padding: 2rem;
+}
+
+form h6 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+form input {
+    height: 45px;
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 1rem;
+}
+
+form textarea {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin: 1rem 0;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+#contact button {
+    background-color: rgb(4, 4, 116);
+    color: whitesmoke;
+    margin: 0 0 2rem;
+    width: 100%;
+    height: 45px;
+}
+
+#contact button:hover {
+    color: black;
+    background-color: whitesmoke;
+    border: 1px solid rgb(4, 4, 116);
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        border-top: 1px solid gray;
+        padding: 0 2rem;
+    }
+
+    footer .icons i {
+        color: black;
+        margin-left: 0.5rem;
+        font-size: 2rem;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    footer .icons i:hover {
+        opacity:2;
+    }
+
+    @media only screen and (min-width: 760px) {
+        .aboutContent {
+            display: inline;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .aboutContent .aboutImage{
+            flex: 1;
+        } 
+        
+        #portfolio .grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        header .menu {
+            display: none;
+        }
+        
+        header nav {
+            position: static;
+            clip-path: polygon(0 0, 100% 0, 100% 100%,);
+            height: fit-content;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        header nav ul {
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        } 
+
+        header nav ul li {
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+        }
+
+        #about,
+        #portfolio,
+        #contact {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        #portfolio .grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        #portfolio .gridItem img {
+            height: 60%;
+        }
+
+        #contact form {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
